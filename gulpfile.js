@@ -30,10 +30,9 @@ gulp.task('browser-sync', () => {
     })
 });
 
-gulp.task('watch', function () {
-    gulp.watch('./dev/scripts/*.js', ['scripts']);
-    gulp.watch('./dev/styles/*.scss', ['styles']);
+gulp.task('default', ['scripts', 'styles', 'browser-sync'], () => {
+    gulp.watch('dev/**/*.js', ['js']);
+    gulp.watch('dev/**/*.scss', ['styles']);
     gulp.watch('*.html', reload);
+    gulp.watch('./public/styles/style.css', reload);
 });
-
-gulp.task('default', ['browser-sync', 'styles', 'scripts', 'watch']);

@@ -1,0 +1,43 @@
+/* HEADER STYLES */ 
+
+header {
+    background: $backgroundColor;
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 70% 100%, 0 85%, 0 0);
+    clip-path: polygon(100% 0, 100% 85%, 70% 100%, 0 85%, 0 0);
+    padding: 20px 0 80px;
+    color: $headingColor;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .headerText {
+        align-self: center;
+        padding: 120px 0 160px;
+    }
+    h1 {
+        font-size: 9rem;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 4rem;
+        margin-top: 0;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: $headingColor;
+        }
+    }
+    .mainNav{
+        width: 30%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+}

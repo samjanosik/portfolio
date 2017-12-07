@@ -1,0 +1,42 @@
+/* GLOBAL STYLES */
+
+// variables
+$headingColor: #222;
+$aboutColor: #989898;
+$textColor: #fff;
+$backgroundColor: #6bd0e1;
+$headingFont: 'Roboto', sans-serif;
+$mainFont: 'Open Sans', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $mainFont;
+}
+
+h1,h2 {
+    font-family: $headingFont;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
