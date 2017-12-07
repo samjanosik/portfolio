@@ -2,7 +2,7 @@
 
 // variables
 $headingColor: #222;
-$aboutColor: #989898;
+$aboutColor: #777;
 $textColor: #fff;
 $backgroundColor: #6bd0e1;
 $headingFont: 'Roboto', sans-serif;
@@ -24,12 +24,8 @@ h1,h2 {
 h2 {
     text-transform: uppercase;
     font-weight: 400;
-}
-
-.wrapper {
-    width: 90%;
-    max-width: 1180px;
-    margin: 0 auto;
+    margin-bottom: 90px;
+    font-size: 4.5rem;
 }
 
 a {
@@ -39,4 +35,19 @@ a {
 ul {
     list-style: none;
     padding: 0;
+}
+
+section {
+    padding: 80px 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1040px;
+    margin: 0 auto;
 }

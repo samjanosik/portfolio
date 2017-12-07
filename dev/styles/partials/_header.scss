@@ -31,13 +31,28 @@ header {
             color: $headingColor;
         }
     }
-    .mainNav{
-        width: 30%;
-        ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
+}
+.mainNav{
+    width: 30%;
+    ul {
+        display: flex;
+        justify-content: space-between;
     }
-
+    a {
+        padding: 15px 5px;
+        position: relative;
+        &::after {
+            transition: all 0.3s ease;
+            content: "";
+            transform: scaleX(0);
+            width: 100%;
+            border-bottom: 2px solid $headingColor;
+            position: absolute;
+            bottom: 5px;
+            left: 0; 
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
 }

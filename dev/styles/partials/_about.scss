@@ -1,0 +1,35 @@
+/* ABOUT SECTION STYLES */ 
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    .portrait {
+        position: relative;
+        z-index: 20;
+        width: 40%;
+        img {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+        }
+        &::after {
+            content:"";
+            width: 100%;
+            height: 100%;
+            background: #363636;
+            position: absolute;
+            z-index: 10;
+            top: 15px;
+            left: 15px;
+        }
+    }
+    .aboutText {
+        align-self: center;
+        width: 52%;
+        color: $aboutColor;
+        p {
+            line-height: 1.5;
+            font-size: 1.8rem;
+        }
+    }
+}
