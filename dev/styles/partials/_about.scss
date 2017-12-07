@@ -1,8 +1,15 @@
 /* ABOUT SECTION STYLES */ 
 
+#about {
+    h2 {
+        margin-top: 0;
+    }
+}
+
 .aboutContent {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
     .portrait {
         position: relative;
         z-index: 20;
@@ -27,9 +34,5 @@
         align-self: center;
         width: 52%;
         color: $aboutColor;
-        p {
-            line-height: 1.5;
-            font-size: 1.8rem;
-        }
     }
 }

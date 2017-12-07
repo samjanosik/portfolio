@@ -1,0 +1,49 @@
+/* WORK SECTION STYLES */
+
+#work {
+    background: $backgroundColor;
+    -webkit-clip-path: polygon(30% 0, 100% 6%, 100% 94%, 70% 100%, 0 94%, 0 6%);
+    clip-path: polygon(30% 0, 100% 6%, 100% 94%, 70% 100%, 0 94%, 0 6%);
+    h2 {
+        margin-top: 120px;
+    }
+    .project {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 280px;
+        &:last-child {
+            margin-bottom: 180px;
+        }
+        img {
+            width: 100%;
+        }
+        &__img {
+            width: 50%;
+        }
+        &__content {
+            width: 42%;
+            align-self: center;
+        }
+        h3 {
+            font-size: 2.4rem;
+            margin: 0;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+    .projectSkills {
+        display: flex;
+        li {
+            margin-right: 20px;
+            font-weight: 700;
+        }
+    }
+    .btn {
+        color: $headingColor;
+        padding: 10px 20px;
+        border: 2px solid $headingColor;
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
