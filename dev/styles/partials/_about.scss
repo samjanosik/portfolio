@@ -10,6 +10,7 @@
         position: absolute;
         left: 20px;
         z-index: 20;
+        animation-duration: 1s;
         &::before {
             content: "";
             height: 110px;

@@ -12,6 +12,7 @@ header {
     .headerText {
         margin-top: 23%;
         position: relative;
+        animation-duration: 1s;
         &::after {
             content: "";
             width: 135px;

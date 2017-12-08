@@ -1,10 +1,31 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const babel = require('gulp-babel');
+const babel = require('babelify');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const notify = require('gulp-notify');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
+const plumber = require('gulp-plumber');
 const reload = browserSync.reload;
+
+
+/*
+const gulp = require('gulp');
+const babel = require('babelify');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+const notify = require('gulp-notify');
+const sass = require('gulp-sass');
+const plumber = require('gulp-plumber');
+const concat = require('gulp-concat');
+const historyApiFallback = require('connect-history-api-fallback');
+*/ 
 
 gulp.task('styles', () => {
     return gulp.src('./dev/styles/**/*.scss')
@@ -16,11 +37,19 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('./dev/scripts/main.js')
-        .pipe(babel({
-            presets: ['env']
+    return browserify('dev/scripts/main.js', { debug: true })
+        .transform('babelify', {
+            sourceMaps: true,
+            presets: ['es2015']
+        })
+        .bundle()
+        .on('error', notify.onError({
+            message: "Error: <%= error.message %>",
+            title: 'Error in JS 💀'
         }))
-        .pipe(gulp.dest('./public/scripts'))
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(gulp.dest('public/scripts'))
         .pipe(reload({ stream: true }));
 });
 
