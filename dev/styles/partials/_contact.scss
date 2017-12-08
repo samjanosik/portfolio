@@ -1,9 +1,6 @@
 /* CONTACT SECTION STYLES */ 
 
 #contact {
-    background: $backgroundColor;
-    -webkit-clip-path: polygon(30% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
-    clip-path: polygon(30% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
     .wrapper {
         display: flex;
         flex-direction: column;

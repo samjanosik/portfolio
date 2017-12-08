@@ -1,10 +1,7 @@
 /* GLOBAL STYLES */
 
 // variables
-$headingColor: #222;
-$aboutColor: #777;
-$textColor: #fff;
-$backgroundColor: #6bd0e1;
+$headingColor: #111;
 $headingFont: 'Roboto', sans-serif;
 $mainFont: 'Open Sans', sans-serif;
 
@@ -25,7 +22,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 90px;
-    font-size: 4.5rem;
+    font-size: 4.8rem;
 }
 
 a {
@@ -44,7 +41,7 @@ ul {
 }
 
 section {
-    padding: 200px 0;
+    padding: 142px 0;
 }
 
 img {
@@ -52,8 +49,15 @@ img {
     display: block;
 }
 
-.wrapper {
+.outerWrapper {
     width: 90%;
     max-width: 1140px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.innerWrapper {
+    width: 90%;
+    align-self: flex-end;
 }

@@ -1,12 +1,6 @@
 /* WORK SECTION STYLES */
 
 #work {
-    background: $backgroundColor;
-    -webkit-clip-path: polygon(30% 0, 100% 6%, 100% 94%, 70% 100%, 0 94%, 0 6%);
-    clip-path: polygon(30% 0, 100% 6%, 100% 94%, 70% 100%, 0 94%, 0 6%);
-    h2 {
-        margin-top: 120px;
-    }
     .project {
         display: flex;
         justify-content: space-between;
