@@ -5,6 +5,14 @@ $headingColor: #111;
 $headingFont: 'Roboto', sans-serif;
 $mainFont: 'Open Sans', sans-serif;
 
+// mixins
+
+@mixin media($width){
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
+
 html {
     font-size: 62.5%;
 }

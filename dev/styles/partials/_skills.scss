@@ -1,12 +1,31 @@
 /* SKILLS SECTION STYLES */
 
 #skills {
-    padding-top: 0;
+    padding-top: 40px;
+    padding-bottom: 100px;
     .innerWrapper {
         display: flex;
     }
     h2 {
-        width: 50%;
+        width: calc(50% - 20px);
+        align-self: center;
+        position: relative;
+        margin-left: 20px;
+        &::before, &::after {
+            content: "";
+            border-left: 2px solid $headingColor;
+            position: absolute;
+        }
+        &::before {
+            height: 175px;
+            top: -210px;
+            left: 110px;
+        }
+        &::after {
+            height: 205px;
+            bottom: -240px;
+            left: 110px;
+        }
     }
     ul {
         display: flex;
@@ -17,15 +36,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         i {
-            font-size: 9rem;
+            font-size: 8.5rem;
         }
         p {
             text-align: center;
             text-transform: uppercase;
             font-weight: 700;
+            margin-bottom: 0;
         }
     }
 }

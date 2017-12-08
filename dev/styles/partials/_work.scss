@@ -1,26 +1,44 @@
 /* WORK SECTION STYLES */
 
 #work {
-    .project {
+    padding: 0;
+    h2 {
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    .projects {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 280px;
-        &:last-child {
-            margin-bottom: 180px;
+        flex-direction: column;
+    }
+    .project {
+        width: 45%;
+        &__content {
+            margin-left: 100px;
+        }
+        &--right {
+            align-self: flex-end;
+            margin-top: -37%;
+        }
+        &:nth-child(3n) {
+            margin-top: -10%;
         }
         img {
             width: 100%;
         }
-        &__img {
-            width: 48%;
-        }
-        &__content {
-            width: 42%;
-            align-self: center;
-        }
         h3 {
             font-size: 2.4rem;
-            margin: 0;
+            font-weight: 600;
+            margin: 40px 0 0;
+            text-transform: uppercase;
+            position: relative;
+            &::after {
+                content: "";
+                width: 85px;
+                border-bottom: 2px solid $headingColor;
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+            }
         }
         p {
             margin: 10px 0;
@@ -28,6 +46,7 @@
     }
     .projectSkills {
         display: flex;
+        margin: 10px 0;
         li {
             margin-right: 20px;
             font-weight: 700;

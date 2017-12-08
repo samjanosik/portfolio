@@ -1,9 +1,22 @@
 /* CONTACT SECTION STYLES */ 
 
 #contact {
-    .wrapper {
+    padding: 80px 0;
+    .innerWrapper {
         display: flex;
         flex-direction: column;
+    }
+    h2 {
+        margin-left: 20px;
+        position: relative;
+        &::before {
+            content: "";
+            height: 200px;
+            border-left: 2px solid $headingColor;
+            position: absolute;
+            left: 110px;
+            top: -240px;
+        }
     }
     .email {
         font-size: 3rem;

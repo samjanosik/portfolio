@@ -1,6 +1,7 @@
 /* ABOUT SECTION STYLES */ 
 
 #about {
+    padding-bottom: 60px;
     .innerWrapper {
         position: relative;
     }
@@ -23,7 +24,6 @@
 .aboutContent {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
     position: relative;
     z-index: 10;
     margin-top: 32px;
