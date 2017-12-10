@@ -12,15 +12,25 @@
     }
     .project {
         width: 45%;
+        @include media(768px){
+            width: 100%;
+            margin-bottom: 40px;
+        }
         &__content {
             margin-left: 100px;
         }
         &--right {
             align-self: flex-end;
             margin-top: -37%;
+            @include media(768px){
+                margin-top: 0;
+            }
         }
         &:nth-child(3n) {
             margin-top: -10%;
+            @include media(768px){
+                margin-top: 0;
+            }
         }
         img {
             width: 100%;

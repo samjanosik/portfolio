@@ -68,4 +68,7 @@ img {
 .innerWrapper {
     width: 90%;
     align-self: flex-end;
+    @include media(768px) {
+        width: 100%;
+    }
 }

@@ -8,4 +8,12 @@ $(function () {
         speed: 1000
     });
     new WOW().init();
+
+    $('.hamburger, .mainNav a').on('click', function () {
+        $('.hamburger').toggleClass('open');
+    });
+
+    $('.hamburger, .mainNav a').on('click', function () {
+        $('.mainNav ul').slideToggle();
+    });
 });
