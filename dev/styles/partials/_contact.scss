@@ -5,6 +5,15 @@
     @include media(768px){
         padding-top: 100px;
     }
+    @include media(480px) {
+        padding-bottom: 15px;
+    }
+    .outerWrapper {
+        @include media(480px) {
+            width: 100%;
+            padding: 0 30px;
+        }
+    }
     .innerWrapper {
         display: flex;
         flex-direction: column;
@@ -15,16 +24,24 @@
         @include media(768px){
             margin-bottom: 40px;
         }
+        @include media(480px) {
+            margin-left: 0;
+        }
         &::before {
             content: "";
-            height: 200px;
+            height: 180px;
             border-left: 2px solid $headingColor;
             position: absolute;
             left: 110px;
-            top: -240px;
+            top: -220px;
             @include media(768px) {
-                height: 140px;
-                top: -165px;
+                height: 100px;
+                top: -125px;
+            }
+            @include media(480px) {
+                height: 90px;
+                top: -115px;
+                left: 55px;
             }
         }
     }
@@ -33,6 +50,9 @@
         font-weight: 700;
         color: $headingColor;
         align-self: center;
+        @include media(480px) {
+            font-size: 2.4rem;
+        }
     }
     .social {
         align-self: center;

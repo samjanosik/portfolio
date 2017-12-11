@@ -2,34 +2,52 @@
 
 #work {
     padding: 0;
+    .outerWrapper {
+        @include media(480px) {
+            width: 100%;
+        }
+    }
     h2 {
         margin-left: 20px;
         margin-bottom: 40px;
+        @include media(480px) {
+            margin-left: 30px;
+        }
     }
     .projects {
         display: flex;
-        flex-direction: column;
-    }
-    .project {
-        width: 45%;
-        @include media(768px){
-            width: 100%;
-            margin-bottom: 40px;
+        justify-content: space-between;
+        @include media(768px) {
+            flex-direction: column;
         }
-        &__content {
-            margin-left: 100px;
-        }
-        &--right {
-            align-self: flex-end;
-            margin-top: -37%;
-            @include media(768px){
-                margin-top: 0;
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 47%;
+            @include media(768px) {
+                width: 100%;
+            }
+            &:last-child {
+                margin-top: 20%;
+                @include media(768px) {
+                    margin-top: 80px;
+                }
             }
         }
-        &:nth-child(3n) {
-            margin-top: -10%;
-            @include media(768px){
-                margin-top: 0;
+    }
+    .project {
+        width: 100%;
+        &__content {
+            margin-left: 80px;
+            @include media(480px) {
+                padding: 0 30px;
+                margin-left: 0;
+            }
+        }
+        &:last-child {
+            margin-top: 45%;
+            @include media(768px) {
+                margin-top: 80px;
             }
         }
         img {
@@ -41,21 +59,32 @@
             margin: 40px 0 0;
             text-transform: uppercase;
             position: relative;
+            @include media(480px) {
+                margin-left: 30px;
+            }
             &::after {
                 content: "";
-                width: 85px;
+                width: 65px;
                 border-bottom: 2px solid $headingColor;
                 position: absolute;
                 bottom: -25px;
                 left: 0;
+                @include media(480px) {
+                    display: none;
+                }
             }
         }
         p {
             margin: 10px 0;
+            font-size: 1.6rem;
+            @include media(480px) {
+                font-size: 1.5rem;
+            }
         }
     }
     .projectSkills {
         display: flex;
+        flex-wrap: wrap;
         margin: 10px 0;
         li {
             margin-right: 20px;
