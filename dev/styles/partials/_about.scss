@@ -23,7 +23,7 @@
         &::before {
             content: "";
             height: 110px;
-            border-left: 2px solid $headingColor;
+            border-left: 2px solid $mainColor;
             position: absolute;
             top: -145px;
             left: 110px;
@@ -61,7 +61,7 @@
     .aboutText {
         align-self: center;
         width: 50%;
-        color: $headingColor;
+        color: $mainColor;
         @include media(768px) {
             width: 100%;
         }

@@ -36,7 +36,7 @@
         }
         &::before, &::after {
             content: "";
-            border-left: 2px solid $headingColor;
+            border-left: 2px solid $mainColor;
             position: absolute;
         }
         &::before {
@@ -71,7 +71,7 @@
             position: relative;
             &::after {
                 content: "";
-                border-left: 2px solid $headingColor;
+                border-left: 2px solid $mainColor;
                 position: absolute;
                 height: 120px;
                 left: 130px;
@@ -95,6 +95,7 @@
         }
         i {
             font-size: 8.5rem;
+            color: $headingColor;
             @include media(480px) {
                 font-size: 5rem;
             }

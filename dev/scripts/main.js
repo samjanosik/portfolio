@@ -14,13 +14,20 @@ $(function () {
 
     // animate hamburger menu on open and close, when toggle is clicked and when nav links are clicked (to close)
     // when nav is open, prevent scroll of body
-    $('.hamburger, .mainNav a').on('click', function () {
+    // slide nav in from above
+    $('.hamburger').on('click', function () {
         $('.hamburger').toggleClass('open');
         $('body').toggleClass('noScroll');
+        $('.mainNav ul').toggleClass('onScreen')
     });
 
-    // slide nav down when hamburger clicked, and close when hamburger or any nav link is clicked
-    $('.hamburger, .mainNav a').on('click', function () {
-        $('.mainNav ul').slideToggle();
+    $('.mainNav a').on('click', function () {
+        $('.hamburger').removeClass('open');
+        $('body').removeClass('noScroll');
+        $('.mainNav ul').removeClass('onScreen');
     });
+
+
+
+
 });
