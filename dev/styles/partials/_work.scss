@@ -28,7 +28,7 @@
                 width: 100%;
             }
             &:last-child {
-                margin-top: 220px;
+                margin-top: 260px;
                 @include media(768px) {
                     margin-top: 80px;
                 }
@@ -87,8 +87,9 @@
         flex-wrap: wrap;
         margin: 10px 0;
         li {
-            margin-right: 20px;
+            margin: 5px 20px 0 0;
             font-weight: 700;
+            font-size: 1.5rem;
             &:last-child {
                 margin-right: 0;
             }
@@ -100,5 +101,14 @@
         border: 2px solid $mainColor;
         display: inline-block;
         margin-top: 10px;
+        transition: all 0.3s ease;
+        &:hover {
+            border: 2px solid $headingColor;
+            background: $headingColor;
+            color: #fff;
+        }
+    }
+    .live {
+        margin-right: 15px;
     }
 }

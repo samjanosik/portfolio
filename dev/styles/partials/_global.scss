@@ -8,6 +8,16 @@ $mainFont: 'Open Sans', sans-serif;
 
 // mixins
 
+@mixin link($bottom) {
+    content: "";
+    transform: scaleX(0);
+    width: 100%;
+    border-bottom: 2px solid $mainColor;
+    position: absolute;
+    bottom: $bottom;
+    left: 0; 
+}
+
 @mixin media($width){
     @media (max-width: #{$width}) {
         @content;
@@ -86,4 +96,16 @@ img {
 footer {
     text-align: center;
     padding: 20px 0;
+    a {
+        color: $mainColor;
+        font-size: 1.6rem;
+        position: relative;
+        &::after{
+            @include link(-5px);
+            transition: all 0.3s ease;
+        } 
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
 }

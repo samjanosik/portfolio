@@ -50,14 +50,8 @@
         color: $headingColor;
         position: relative;
         &::after {
-            content: "";
-            width: 100%;
-            transform: scaleX(0);
-            border-bottom: 2px solid $headingColor;
+            @include link(-10px);
             transition: all 0.5s ease;
-            position: absolute;
-            bottom: -10px;
-            left: 0;
         }
         &:hover::after {
             transform: scaleX(1);
@@ -67,13 +61,20 @@
         }
     }
     .social {
-        // display: flex;
         li {
             margin: 20px 0;
         }
         a {
             color: $headingColor;
             font-size: 2rem;
+            position: relative;
+            &::after {
+                @include link(-5px);
+                transition: all 0.5s ease;
+            }
+            &:hover::after {
+                transform: scaleX(1);
+            }
             i {
                 font-size: 2.4rem;
                 margin-right: 10px;
